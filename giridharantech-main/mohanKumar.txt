@@ -1,0 +1,243 @@
+" create mode 100644 giridharantech-main/README.md
+ create mode 100644 giridharantech-main/css/bootstrap.min.css
+ create mode 100644 giridharantech-main/css/style.css
+ create mode 100644 giridharantech-main/img/about-1.jpg
+ create mode 100644 giridharantech-main/img/about-2.jpg
+ create mode 100644 giridharantech-main/img/bg-header-1.png
+ create mode 100644 giridharantech-main/img/bg-header.png
+ create mode 100644 giridharantech-main/img/bg-icon.png
+ create mode 100644 giridharantech-main/img/coming-soon-text.jpg
+ create mode 100644 giridharantech-main/img/favicon.png
+ create mode 100644 giridharantech-main/img/favicon_small.png
+ create mode 100644 giridharantech-main/img/giridharan_palanisamy.png
+ create mode 100644 giridharantech-main/img/logowa.jpg
+ create mode 100644 giridharantech-main/img/myprofile-1.png
+ create mode 100644 giridharantech-main/img/myprofile.jpg
+ create mode 100644 giridharantech-main/img/myprofile.png
+ create mode 100644 giridharantech-main/img/myproject-1.jpg
+ create mode 100644 giridharantech-main/img/myproject-2.jpg
+ create mode 100644 giridharantech-main/img/myproject-3.png
+ create mode 100644 giridharantech-main/img/myproject-4.jpg
+ create mode 100644 giridharantech-main/img/myproject-5.jpg
+ create mode 100644 giridharantech-main/img/myproject-6.svg
+ create mode 100644 giridharantech-main/img/myproject-7.jpg
+ create mode 100644 giridharantech-main/img/myproject-8.jpg
+ create mode 100644 giridharantech-main/img/profile.png
+ create mode 100644 giridharantech-main/img/project-1.jpg
+ create mode 100644 giridharantech-main/img/project-2.jpg
+ create mode 100644 giridharantech-main/img/project-3.jpg
+ create mode 100644 giridharantech-main/img/project-4.jpg
+ create mode 100644 giridharantech-main/img/project-5.jpg
+ create mode 100644 giridharantech-main/img/project-6.jpg
+ create mode 100644 giridharantech-main/img/project-7.jpg
+ create mode 100644 giridharantech-main/img/project-8.jpg
+ create mode 100644 giridharantech-main/img/purple.png
+ create mode 100644 giridharantech-main/img/send.svg
+ create mode 100644 giridharantech-main/img/team-1.jpg
+ create mode 100644 giridharantech-main/img/team-2.jpg
+ create mode 100644 giridharantech-main/img/team-3.jpg
+ create mode 100644 giridharantech-main/img/techstack.png
+ create mode 100644 giridharantech-main/img/techstack2.png
+ create mode 100644 giridharantech-main/img/techstacks/amazon-ec2.png
+ create mode 100644 giridharantech-main/img/techstacks/angular.png
+ create mode 100644 giridharantech-main/img/techstacks/aws.png
+ create mode 100644 giridharantech-main/img/techstacks/bootstrap.png
+ create mode 100644 giridharantech-main/img/techstacks/csharp.png
+ create mode 100644 giridharantech-main/img/techstacks/css.png
+ create mode 100644 giridharantech-main/img/techstacks/dart.png
+ create mode 100644 giridharantech-main/img/techstacks/dart_logo.png
+ create mode 100644 giridharantech-main/img/techstacks/django.png
+ create mode 100644 giridharantech-main/img/techstacks/docker.png
+ create mode 100644 giridharantech-main/img/techstacks/elastic.png
+ create mode 100644 giridharantech-main/img/techstacks/elasticsearch.jpg
+ create mode 100644 giridharantech-main/img/techstacks/flutter.png
+ create mode 100644 giridharantech-main/img/techstacks/gcp.png
+ create mode 100644 giridharantech-main/img/techstacks/html.png
+ create mode 100644 giridharantech-main/img/techstacks/html_css.png
+ create mode 100644 giridharantech-main/img/techstacks/java.png
+ create mode 100644 giridharantech-main/img/techstacks/javascript.jpeg
+ create mode 100644 giridharantech-main/img/techstacks/javascript.png
+ create mode 100644 giridharantech-main/img/techstacks/jenkins.png
+ create mode 100644 giridharantech-main/img/techstacks/jquery.jpg
+ create mode 100644 giridharantech-main/img/techstacks/kafka.jpg
+ create mode 100644 giridharantech-main/img/techstacks/kafka.png
+ create mode 100644 giridharantech-main/img/techstacks/mongodb.jpg
+ create mode 100644 giridharantech-main/img/techstacks/mongodb.png
+ create mode 100644 giridharantech-main/img/techstacks/mysql.png
+ create mode 100644 giridharantech-main/img/techstacks/nodejs.png
+ create mode 100644 giridharantech-main/img/techstacks/postgres.png
+ create mode 100644 giridharantech-main/img/techstacks/python.png
+ create mode 100644 giridharantech-main/img/techstacks/react.png
+ create mode 100644 giridharantech-main/img/techstacks/redis.png
+ create mode 100644 giridharantech-main/img/techstacks/springboot.png
+ create mode 100644 giridharantech-main/img/testimonial-1.jpg
+ create mode 100644 giridharantech-main/img/testimonial-2.jpg
+ create mode 100644 giridharantech-main/img/testimonial-3.jpg
+ create mode 100644 giridharantech-main/img/thank-you.png
+ create mode 100644 giridharantech-main/img/whatsapp.png
+ create mode 100644 giridharantech-main/img/whatsapp1.png
+ create mode 100644 giridharantech-main/index.html
+ create mode 100644 giridharantech-main/js/chat-gpt.js
+ create mode 100644 giridharantech-main/js/main.js
+ create mode 100644 giridharantech-main/lib/animate/animate.css
+ create mode 100644 giridharantech-main/lib/animate/animate.min.css
+ create mode 100644 giridharantech-main/lib/counterup/counterup.min.js
+ create mode 100644 giridharantech-main/lib/easing/easing.js
+ create mode 100644 giridharantech-main/lib/easing/easing.min.js
+ create mode 100644 giridharantech-main/lib/isotope/isotope.pkgd.js
+ create mode 100644 giridharantech-main/lib/isotope/isotope.pkgd.min.js
+ create mode 100644 giridharantech-main/lib/lightbox/css/lightbox.css
+ create mode 100644 giridharantech-main/lib/lightbox/css/lightbox.min.css
+ create mode 100644 giridharantech-main/lib/lightbox/images/close.png
+ create mode 100644 giridharantech-main/lib/lightbox/images/loading.gif
+ create mode 100644 giridharantech-main/lib/lightbox/images/next.png
+ create mode 100644 giridharantech-main/lib/lightbox/images/prev.png
+ create mode 100644 giridharantech-main/lib/lightbox/js/lightbox.js
+ create mode 100644 giridharantech-main/lib/lightbox/js/lightbox.min.js
+ create mode 100644 giridharantech-main/lib/lightbox/links.php
+ create mode 100644 giridharantech-main/lib/owlcarousel/LICENSE
+ create mode 100644 giridharantech-main/lib/owlcarousel/assets/ajax-loader.gif
+ create mode 100644 giridharantech-main/lib/owlcarousel/assets/owl.carousel.css
+ create mode 100644 giridharantech-main/lib/owlcarousel/assets/owl.carousel.min.css
+ create mode 100644 giridharantech-main/lib/owlcarousel/assets/owl.theme.default.css
+ create mode 100644 giridharantech-main/lib/owlcarousel/assets/owl.theme.default.min.css
+ create mode 100644 giridharantech-main/lib/owlcarousel/assets/owl.theme.green.css
+ create mode 100644 giridharantech-main/lib/owlcarousel/assets/owl.theme.green.min.css
+ create mode 100644 giridharantech-main/lib/owlcarousel/assets/owl.video.play.png
+ create mode 100644 giridharantech-main/lib/owlcarousel/owl.carousel.js
+ create mode 100644 giridharantech-main/lib/owlcarousel/owl.carousel.min.js
+ create mode 100644 giridharantech-main/lib/typed/typed.js
+ create mode 100644 giridharantech-main/lib/typed/typed.min.js
+ create mode 100644 giridharantech-main/lib/waypoints/links.php
+ create mode 100644 giridharantech-main/lib/waypoints/waypoints.min.js
+ create mode 100644 giridharantech-main/lib/wow/wow.js
+ create mode 100644 giridharantech-main/lib/wow/wow.min.js
+ create mode 100644 giridharantech-main/scss/bootstrap.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_accordion.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_alert.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_badge.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_breadcrumb.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_button-group.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_buttons.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_card.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_carousel.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_close.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_containers.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_dropdown.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_forms.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_functions.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_grid.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_helpers.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_images.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_list-group.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_mixins.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_modal.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_nav.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_navbar.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_offcanvas.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_pagination.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_popover.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_progress.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_reboot.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_root.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_spinners.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_tables.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_toasts.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_tooltip.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_transitions.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_type.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_utilities.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/_variables.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/bootstrap-grid.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/bootstrap-reboot.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/bootstrap-utilities.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/bootstrap.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/forms/_floating-labels.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/forms/_form-check.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/forms/_form-control.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/forms/_form-range.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/forms/_form-select.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/forms/_form-text.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/forms/_input-group.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/forms/_labels.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/forms/_validation.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/helpers/_clearfix.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/helpers/_colored-links.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/helpers/_position.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/helpers/_ratio.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/helpers/_stretched-link.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/helpers/_text-truncation.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/helpers/_visually-hidden.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_alert.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_border-radius.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_box-shadow.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_breakpoints.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_buttons.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_caret.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_clearfix.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_color-scheme.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_container.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_deprecate.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_forms.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_gradients.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_grid.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_image.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_list-group.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_lists.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_pagination.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_resize.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/mixins/_transition.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/utilities/_api.scss
+ create mode 100644 giridharantech-main/scss/bootstrap/scss/vendor/_rfs.scss
+ create mode 100644 giridharantech-main/sitemap.xml
+ create mode 100644 giridharantech-main/svg/WhatsAppButtonWhiteLarge.svg
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git branch
+* master
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git branch -m main
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git branch
+* main
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git push origin main
+Enumerating objects: 229, done.
+Counting objects: 100% (229/229), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (221/221), done.
+Writing objects: 100% (229/229), 2.91 MiB | 1.01 MiB/s, done.
+Total 229 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/MohankumarKolathur/FILES.git
+ * [new branch]      main -> main
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git pull
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 735 bytes | 3.00 KiB/s, done.
+From https://github.com/MohankumarKolathur/FILES
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git add . 
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git commit -m "another"
+On branch main
+Untracked files:
+        ../Selvam.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git status
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../Selvam.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git add .
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git commit -m "added files"
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git add .
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git commit -m "mohan"
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\Admin\Desktop\myFiles\giridharantech-main> "
