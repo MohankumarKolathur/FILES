@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Giridharan Palanisamy - Fast-Paced Software Development Master</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta name="description"
+        content="Launch your Web and Mobile apps rapidly to meet your business requirements quickly. Discuss, finalize features, and launch your app with ease. Focus on your business growth">
+    <meta name="keywords"
+        content="fullstack,developer,software,engineer,MVP,expert,senior,highly,exeperienced,freelancer,technical,co-founder">
+    <meta name="author" content="Giridharan Palanisamy">
+
+    <meta property="og:title" content="Giridharan Palanisamy">
+    <meta property="og:description"
+        content="Launch your Web and Mobile apps rapidly to meet your business requirements quickly. Discuss, finalize features, and launch your app with ease. Focus on your business growth">
+    <meta property="og:image" content="http://www.giridharan.tech/img/giridharan_palanisamy.jpg">
+    <meta property="og:url" content="http://giridharan.tech/">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MXZ5LKN6M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8MXZ5LKN6M');
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("3wf_7bRGotKZ5OMfD");
+        })();
+        function getData() {
+            var data = {
+                from_name: document.getElementById('name').value,
+                message: document.getElementById('message').value,
+                subject: document.getElementById('subject').value,
+                from_email: document.getElementById('email').value
+            };
+            return data;
+        }
+        function clearAll() {
+            document.getElementById('name').value = '';
+            document.getElementById('message').value = '';
+            document.getElementById('subject').value = '';
+            document.getElementById('email').value = '';
+        }
+        function sendMessage() {
+            if (validateContactForm()) {
+                $('#spinner').addClass('show');
+                var data = getData();
+                emailjs.send('service_70d0a1r', 'template_nx53bqq', data)
+                    .then(function (response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        clearAll();
+                        $('#spinner').removeClass('show');
+                        $('#replayModal').modal('show');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            }
+
+        }
+
+        function init() {
+            const nameInput = document.getElementById("name");
+            const emailInput = document.getElementById("email");
+            const messageInput = document.getElementById("message");
+            // Clear error messages if input is valid
+            nameInput.addEventListener("focus", () => {
+                if (!nameError) {
+                    nameInput.nextElementSibling.textContent = "";
+                }
+            });
+            emailInput.addEventListener("focus", () => {
+                if (!emailError) {
+                    emailInput.nextElementSibling.textContent = "";
+                }
+            });
+            messageInput.addEventListener("focus", () => {
+                if (!messageError) {
+                    messageInput.nextElementSibling.textContent = "";
+                }
+            });
+        }
+        function validateContactForm() {
+            // Get form elements
+            const nameInput = document.getElementById("name");
+            const emailInput = document.getElementById("email");
+            const messageInput = document.getElementById("message");
+
+            // Get form values
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const message = messageInput.value.trim();
+
+
+
+            // If any field has an error, return false
+            if (nameError || emailError || messageError) {
+                return false;
+            }
+
+            // If all fields are valid, return true
+            return true;
+        }
+
+        // Helper function to validate email format
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Init contact form
+        init();
+
+
+    </script>
+
+
+
+    <style>
+        .custom-modal .modal-content {
+            background-color: #EBE5DE;
+            color: black;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .custom-modal .modal-header {
+            background-color: #075e54;
+            color: #fff;
+        }
+
+        .modal-footer {
+            background-color: #EBE5DE;
+        }
+
+        .modal-body {
+            height: 20 px;
+        }
+
+        .mail-input {
+
+            border-radius: 20px;
+            background-color: #ECE5DD;
+        }
+
+        .msg-input,
+        .name-input,
+        .ph-input {
+
+            border-radius: 20px;
+            background-color: #ECE5DD;
+        }
+
+        .modal-body,
+        .modal-footer {
+            background-image: url(light1.png);
+
+        }
+
+        .form-label {
+
+            border: none;
+
+            /* Add a 2px solid black border at the bottom */
+            color: black;
+            font-family: Segoe UI, Tahoma, 'Geneva', Verdana, sans-serif;
+            font-weight: bolder;
+        }
+
+        #modal-heading {
+            color: white;
+
+            padding-right: 170px !important;
+        }
+
+        .whatsapp-sent {
+            background-color: #075e54;
+
+            border: 2px solid #075e54;
+
+            border-radius: 10%;
+        }
+
+        .sub {
+            color: white;
+        }
+
+        .icon {
+            padding-top: 10px;
+        }
+
+        .textbt {
+            position: relative;
+        }
+
+        .send-logo {
+            color: white;
+        }
+        body,html{
+  width:100%;
+  height: 100%;
+}
+
+
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary fw-bold m-0">Giridharan</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#experience" class="nav-item nav-link">Experience</a>
+                <a href="#skill" class="nav-item nav-link">Skills</a>
+                <a href="#service" class="nav-item nav-link">Services</a>
+            </div>
+
+            <div class="navbar-nav me-auto py-0">
+                <a href="#project" class="nav-item nav-link">Projects</a>
+                <!--<a href="#testimonial" class="nav-item nav-link">Testimonial</a>-->
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <div class="navbar-nav me-auto py-0 d-flex pt-2">
+                <a class="btn btn-square btn-outline-primary me-2" target="_blank" rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/giridharanpalanisamy/">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn btn-square btn-outline-primary me-2" target="_blank" rel="noopener noreferrer"
+                    href="https://www.instagram.com/apgiridharan/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn btn-square btn-outline-primary me-2" target="_blank" rel="noopener noreferrer"
+                    href="https://twitter.com/apgiridharan">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="btn btn-square btn-outline-primary me-2" target="_blank" rel="noopener noreferrer"
+                    href="https://www.facebook.com/apgiridharan">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-light my-6 mt-0 " id="home">
+        <section class="sticky">
+            <div class="bubbles ">
+                <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+            </div>
+          </section>
+        <div class="container ">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                    <h3 class="text-primary mb-3">I'm</h3>
+                    <h1 class="dispaly-name mb-3">Giridharan Palanisamy</h1>
+                    <h2 class="typed-text-output d-inline"></h2>
+                    <div class="typed-text d-none">Software Architect, Technology Evangelist, Technical Mentor,Motivational Speaker , AI Engineer,</div>
+                    <div class="d-flex align-items-center pt-5">
+                        <a href="#contact" class="btn btn-primary py-3 px-4 me-5">Connect With Me</a>
+                        <button type="button" class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                        <h5 class="ms-4 mb-0 d-none d-sm-inline">Play Video</h5>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6" style="z-index: 1;">
+                    <div class="position-relative">
+                        <img class="img-fluid " src="img/myprofile-1.png"  alt=""/>
+                    </div>
+                    <div class=" sliding">
+                         <div class="slider-thumb "></div> 
+                        <div class="slider-thumb1 "></div>
+                            <div class="slider-thumb2 "> </div>
+                            <div class="slider-thumb3 "></div>
+                            <!-- <div class="slider-thumb4 "> </div>
+                            <div class="slider-thumb5 "></div> -->
+                        </div>
+                     </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Introduction</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <img src="img/coming-soon-text.jpg" />
+                        <!--<iframe class="embed-responsive-item" src="img/coming-soon-text.png" id="video" allowfullscreen allowscriptaccess="always"
+                            allow="autoplay"></iframe>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+    <!-- Thank you Modal Start -->
+    <div class="modal modal-thankyou fade" id="replayModal" tabindex="-1" aria-labelledby="thankYouLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="thankYouLabel">Great!</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <img src="img/thank-you.png" />
+                        <!--<iframe class="embed-responsive-item" src="img/coming-soon-text.png" id="video" allowfullscreen allowscriptaccess="always"
+                            allow="autoplay"></iframe>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Thank you Modal End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-6" id="about">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="years flex-shrink-0 text-center me-4">
+                            <h1 class="display-1 mb-0">8+</h1>
+                            <h5 class="mb-0">Years</h5>
+                        </div>
+                        <h3 class="lh-base mb-0">of working experience as a product developer</h3>
+                    </div>
+                    <p class="mb-4">Leveraging my full-stack development experience, I specialize in crafting
+                        high-impact MVPs for startups and entrepreneurs.
+                        My innovative mindset and technical expertise empower me to mentor students in mastering the
+                        latest technologies.</p>
+            
+                    <p class="mb-3 "><i class="far fa-check-circle text-primary me-3">  Entrepreneurial mindset</i></p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3">   Exporing new technologies</i></p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3">   Tailored mentorship</i></p>
+                
+                    <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/project-7.jpg" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/project-8.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Projects</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">18</h2>
+                    </div>
+                    <p class="mb-4"> I have successfully built numerous products from scratch. My expertise lies in fast
+                        MVP development. I have played a crucial role in helping several startups build their core
+                        teams.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Students</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">2000</h2>+
+                    </div>
+                    <p class="mb-0">I have mentored many students in technology and real-time product development. I
+                        also provide motivational speeches to inspire confidence and help students reach their full
+                        potential.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Experience Start -->
+    <div class="container-xxl py-6 pb-5 " id="experience">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <h1 class="display-5 mb-5">Experience</h1>
+                    <p class="mb-4"> As a Staff member and Technical advisor, I've had the privilege of working with
+                        startups and MNCs, each experience adding a unique dimension to my professional and personal
+                        growth.</p>
+                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill"
+                                href="#tab-1">Advisor</button>
+                        </li>
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Staff
+                                member</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content ">
+                         <!--using card modified start -->
+                        <!-- <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row gy-5 gx-4 mt-3 d-flex justify-content-around ">
+                                <div class="col-sm-5 card p-3 bg-white ">
+                                    <h5>Founder</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1 ">2023</p>
+                                    <h6 class="mb-0">Zautoai</h6>
+                                </div>
+                                <div class="col-sm-5 card p-3 bg-white">
+                                    <h5>Founder</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2020</p>
+                                    <h6 class="mb-0">Knownfigure Technologies</h6>
+                                </div>
+                                <div class="col-sm-5 card  p-3 bg-white">
+                                    <h5>Technical Advisor</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2019 - 2020</p>
+                                    <h6 class="mb-0">ROSTR Technologies</h6>
+                                </div>
+                                <div class="col-sm-5 card p-3 bg-white">
+                                    <h5>Technical Advisor</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2018 - 2019</p>
+                                    <h6 class="mb-0">Lawcunae Solutions</h6>
+                                </div>
+                                <div class="col-sm-5 card p-3 bg-white">
+                                    <h5>Technical Co-Founder</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2016 - 2017</p>
+                                    <h6 class="mb-0">Smart Scholars</h6>
+                                </div>
+                                <div class="col-sm-5 card p-3 bg-white">
+                                    <h5>Technical Co-Founder</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2014 - 2015</p>
+                                    <h6 class="mb-0">Nesting Blocks</h6>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- using card modified end -->
+
+                                         <!-- no card use -->
+                          <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row gy-5 gx-4 mt-3  ">
+                                <div class="col-sm-6  ">
+                                    <h5>Founder</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1 ">2023</p>
+                                    <h6 class="mb-0">Zautoai</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Founder</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2020</p>
+                                    <h6 class="mb-0">Knownfigure Technologies</h6>
+                                </div>
+                                <div class="col-sm-6 ">
+                                    <h5>Technical Advisor</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2019 - 2020</p>
+                                    <h6 class="mb-0">ROSTR Technologies</h6>
+                                </div>
+                                <div class="col-sm-6 ">
+                                    <h5>Technical Advisor</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2018 - 2019</p>
+                                    <h6 class="mb-0">Lawcunae Solutions</h6>
+                                </div>
+                                <div class="col-sm-6 ">
+                                    <h5>Technical Co-Founder</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2016 - 2017</p>
+                                    <h6 class="mb-0">Smart Scholars</h6>
+                                </div>
+                                <div class="col-sm-6 ">
+                                    <h5>Technical Co-Founder</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2014 - 2015</p>
+                                    <h6 class="mb-0">Nesting Blocks</h6>
+                                </div>
+                            </div>
+                        </div> 
+                                    <!-- no card end -->
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>Senior Member of Technical Staff</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2021 - Present</p>
+                                    <h6 class="mb-0">Altiostar Networks</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Member of Technical Staff - 3</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2020 - 2021</p>
+                                    <h6 class="mb-0">VMWare</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Member of Technical Staff</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2018 - 2020</p>
+                                    <h6 class="mb-0">Altiostar Networks</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>R & D Engineer</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2017 - 2018</p>
+                                    <h6 class="mb-0">NOKIA Solutions & Networks</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Member of Technical Staff</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2016 - 2017</p>
+                                    <h6 class="mb-0">Altiostar Networks</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Programmer Intern</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2015 - 2016</p>
+                                    <h6 class="mb-0">Buddi AI</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Java Developer Intern</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2015 - 2016</p>
+                                    <h6 class="mb-0">iWAN Reasearch Group</h6>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <h5>Java Developer Intern</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2015 - 2016</p>
+                                    <h6 class="mb-0">Sennovate Inc</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Experience End -->
+
+    <!-- Skills Start
+    <div class="container-xxl py-6 pb-5" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-5">Skills</h1>
+                    <p class="mb-4"> A passionate learner and always eager to expand my knowledge in new technologies.</p>
+                    <h3 class="mb-4">Technical Skills</h3>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/java.png" class="card-img-top" alt="java">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">Java</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/nodejs.png" class="card-img-top" alt="NodeJS">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">NodeJS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/python.png" class="card-img-top" alt="Python">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">Python</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/csharp.png" class="card-img-top" alt="c#">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">C#</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/dart_logo.png" class="card-img-top" alt="Dart">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">Dart</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/html.png" class="card-img-top" alt="HTML">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">HTML5</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img height="80%" src="img/techstacks/flutter.png" class="card-img-top" alt="flutter">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">Flutter</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/mongodb.png" class="card-img-top" alt="MongoDB">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">MongoDB</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/postgres.png" class="card-img-top" alt="PostgreSQL">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">PostgreSQL</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/mysql.png" class="card-img-top" alt="MySQL">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">MySQL</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/redis.png" class="card-img-top" alt="redis">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">Redis</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/kafka.jpg" class="card-img-top" alt="Kafka">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">Kafka</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/elastic.png" class="card-img-top" alt="ElasticSearch">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">ElasticSearch</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/amazon-ec2.png" class="card-img-top" alt="Amazon EC2">
+                                            
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">Amazon EC2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-3 wow fadeInUp">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <img src="img/techstacks/docker.png" class="card-img-top" alt="Docker">
+
+                                        </div>
+                                        <div class="card-footer text-center d-none d-sm-inline">
+                                            <p class="">Docker</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     -->
+
+    <!-- Skills Start -->
+    <div class="container-xxl py-6 pb-5" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-5">Skills</h1>
+                    <p class="mb-4"> A passionate learner and always eager to expand my knowledge in new technologies.
+                    </p>
+                    <h3 class="mb-4">Technical Skills</h3>
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">JavaScript</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="85"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Java</h6>
+                                    <h6 class="font-weight-bold">80%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Python</h6>
+                                    <h6 class="font-weight-bold">70%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">C#</h6>
+                                    <h6 class="font-weight-bold">70%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Dart</h6>
+                                    <h6 class="font-weight-bold">60%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="60"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">HTML & CSS</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="85"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Angular</h6>
+                                    <h6 class="font-weight-bold">80%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="80"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Flutter</h6>
+                                    <h6 class="font-weight-bold">70%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">React</h6>
+                                    <h6 class="font-weight-bold">60%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="60"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">MySQL/Postgres/MSSQL</h6>
+                                    <h6 class="font-weight-bold">70%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">MongoDB/ElasticSearch</h6>
+                                    <h6 class="font-weight-bold">70%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Redis</h6>
+                                    <h6 class="font-weight-bold">65%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="65"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Kafka</h6>
+                                    <h6 class="font-weight-bold">60%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="60"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">AWS</h6>
+                                    <h6 class="font-weight-bold">70%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Google Cloud</h6>
+                                    <h6 class="font-weight-bold">65%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="65"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Other CI/CD</h6>
+                                    <h6 class="font-weight-bold">60%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="60"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mb-4">Product & System Design Skills</h3>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">System Design</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="85"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">High-level Desig</h6>
+                                    <h6 class="font-weight-bold">80%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Low-level Design</h6>
+                                    <h6 class="font-weight-bold">80%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Analysing Business Req</h6>
+                                    <h6 class="font-weight-bold">95%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="90"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">MVP</h6>
+                                    <h6 class="font-weight-bold">95%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">PMF</h6>
+                                    <h6 class="font-weight-bold">50%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="50"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Skills End -->
+
+    <!-- Service Start -->
+    <div class="container-fluid bg-light my-5 py-6" id="service">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Services</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="#contact">Connect With Me</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code-branch fa-2x text-white"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Ideas to Apps</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">Lets Talk</span></h6>
+                            <span>I offer MVP development services to quickly launch a minimum viable product that meets
+                                your requirements and is ready for the market in just a few weeks. By testing the market
+                                demand and gathering valuable user feedback, you can make data-driven decisions to
+                                refine your product roadmap. Contact me today to learn more about how I can help you
+                                bring your product idea to life..</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-laptop-code fa-2x text-white"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Technical Consultation</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$0</span></h6>
+                            <span>As a seasoned technical expert, I understand how challenging it can be to navigate the
+                                ever-changing technology landscape. That's why I'm offering my expertise and insights to
+                                help you overcome any technical hurdles you may be facing.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code fa-2x text-white"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Tailored Mentorship</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$0</span></h6>
+                            <span>Whether you're looking to improve your technical skills, gain industry insights, or
+                                develop your soft skills, I can help you achieve your goals. As a seasoned professional
+                                with years of experience in the industry, I have a wealth of knowledge to share and can
+                                provide guidance on everything from programming languages and frameworks to career
+                                development and job search strategies.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-crop-alt fa-2x text-white"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Branding</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$0</span></h6>
+                            <span>Whether you're starting a new business or looking to refresh your brand, I can help
+                                you create a compelling and effective brand that resonates with your target audience.
+                                Let's work together to build a brand that sets you apart from the competition and drives
+                                business success.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+    <!-- project section new--
+    <section class="projects" id="project">
+        <div class="container-xxl py-6 pt-5">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-5">My Projects</h1>
+                    <p class="mb-3">Some of my recent works.</p>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-12 col-md-6 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="img/myproject-1.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Known Figure</h4>
+                            <h6 class="card-subtitle mb-2">Simplifying Influencer Communication</h6>
+                            <p class="card-text">As the founder and CTO of Known Figure, I spearheaded the entire process, from conceptualization to implementation. Known Figure is a platform that facilitates seamless and hassle-free communication between influencers, followers, and brands. It offers 1:1 video calls, integrated calendar and payment services, and public profiles for influencers. The platform revolutionizes how influencers connect with their audience and brands.</p>
+                            <div class="text-center">
+                                <a href="#" target="_blank" class="project-link">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-12 col-md-6 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="img/myproject-2.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Lawcunae</h4>
+                            <h6 class="card-subtitle mb-2">Revolutionizing Legal Document Management</h6>
+                            <p class="card-text">As the CTO of Lawcunae, a legal tech startup, I played a key role in the development of the MVP (Minimum Viable Product) from scratch. I led the end-to-end development process, handling both front-end and back-end implementation, as well as deployment. Additionally, I successfully built and managed the core technical team and effectively handled budget management for the MVP. Lawcunae offers a cutting-edge legal document repository, catering to legal experts such as advocates and students.</p>
+                            <div class="text-center">
+                                <a href="#" target="_blank" class="project-link">Check it Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-12 col-md-6 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="img/myproject-3.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">ROSTR</h4>
+                            <h6 class="card-subtitle mb-2">Enhancing Daily Commutes</h6>
+                            <p class="card-text">I served as the technical co-founder of ROSTR, a cab service startup aimed at connecting drivers and daily commuters. With my expertise in development and architecture, I led the end-to-end development process and successfully deployed the platform. Additionally, I played a crucial role in team building, ensuring a cohesive and skilled team. ROSTR serves as a reliable and convenient daily commute partner, offering seamless cab booking services.</p>
+                            <div class="text-center">
+                                <a href="#" target="_blank" class="project-link">Check it Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-12 col-md-6 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="img/myproject-4.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">CustomitNow</h4>
+                            <h6 class="card-subtitle mb-2">Personalized Fashion at Your Doorstep</h6>
+                            <p class="card-text">CustomitNow, a fashion tech startup, focuses on providing users with customized fashion items right at their doorstep. As a technical advisor and architect for this project, I provided valuable insights and guidance. I also took charge of building a dedicated team to bring the vision to life. CustomitNow empowers users to personalize their clothing choices and revolutionizes the way fashion is accessed and experienced.</p>
+                            <div class="text-center">
+                                <a href="#" target="_blank" class="project-link">Check it Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </section>-->
+
+    <div class="container-fluid bg-light my-5 py-6" id="project">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Projects</h1>
+                </div>
+            </div>
+            <div class="row g-4">
+
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="img/myproject-1.jpg" height="110px" width="110px">
+                            </div>
+                            <div class="col-sm-9 mt-4">
+                                <h4 class="mb-3">Known Figure</h4>
+                                <h6 class="mb-3">Simplifying Influencer Communication</h6>
+                            </div>
+                        </div>
+                        <div class="ms-sm-4 mt-3">
+                            <span>As the founder and CTO of Known Figure, I spearheaded the entire process, from
+                                conceptualization to implementation. Known Figure is a platform that facilitates
+                                seamless and hassle-free communication between influencers, followers, and brands. It
+                                offers 1:1 video calls, integrated calendar and payment services, and public profiles
+                                for influencers. The platform revolutionizes how influencers connect with their audience
+                                and brands.</span>
+                            <div class="mt-4">
+                                <a href="https://www.crunchbase.com/organization/knownfigure" target="_blank"
+                                    class="project-link">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="img/myproject-2.jpg" height="110px" width="110px">
+                            </div>
+                            <div class="col-sm-9 mt-4">
+                                <h4 class="mb-3">Lawcunae</h4>
+                                <h6 class="mb-3">Revolutionizing Legal Document Management</h6>
+                            </div>
+                        </div>
+                        <div class="ms-sm-4 mt-3">
+                            <span>As the CTO of Lawcunae, a legal tech startup, I played a key role in the development
+                                of the MVP (Minimum Viable Product) from scratch. I led the end-to-end development
+                                process, handling both front-end and back-end implementation, as well as deployment.
+                                Additionally, I successfully built and managed the core technical team and effectively
+                                handled budget management for the MVP. Lawcunae offers a cutting-edge legal document
+                                repository, catering to legal experts such as advocates and students.</span>
+                            <div class="mt-4">
+                                <a href="https://wellfound.com/company/lawcunae-infomation-solutions" target="_blank"
+                                    class="project-link">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="img/myproject-3.png" height="110px" width="110px">
+                            </div>
+                            <div class="col-sm-9 mt-4">
+                                <h4 class="mb-3">ROSTR</h4>
+                                <h6 class="mb-3">Enhancing Daily Commutes</h6>
+                            </div>
+                        </div>
+                        <div class="ms-sm-4 mt-3">
+                            <span>I served as the technical co-founder of ROSTR, a cab service startup aimed at
+                                connecting drivers and daily commuters. With my expertise in development and
+                                architecture, I led the end-to-end development process and successfully deployed the
+                                platform. Additionally, I played a crucial role in team building, ensuring a cohesive
+                                and skilled team. ROSTR serves as a reliable and convenient daily commute partner,
+                                offering seamless cab booking services.</span>
+                            <div class="mt-4">
+                                <a href="https://www.crunchbase.com/organization/rostr-your-daily-commute-partner"
+                                    target="_blank" class="project-link">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="img/myproject-4.jpg" height="110px" width="110px">
+                            </div>
+                            <div class="col-sm-9 mt-4">
+                                <h4 class="mb-3">CustomitNow</h4>
+                                <h6 class="mb-3">Personalized Fashion at Your Doorstep</h6>
+                            </div>
+                        </div>
+                        <div class="ms-sm-4 mt-3">
+                            <span>CustomitNow, a fashion tech startup, focuses on providing users with customized
+                                fashion items right at their doorstep. As a technical advisor and architect for this
+                                project, I provided valuable insights and guidance. I also took charge of building a
+                                dedicated team to bring the vision to life. CustomitNow empowers users to personalize
+                                their clothing choices and revolutionizes the way fashion is accessed and
+                                experienced.</span>
+                            <div class="mt-4">
+                                <a href="https://wellfound.com/company/customitnow-1" target="_blank"
+                                    class="project-link">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="img/myproject-5.jpg" height="110px" width="110px">
+                            </div>
+                            <div class="col-sm-9 mt-4">
+                                <h4 class="mb-3">Altiostar 4G EMS</h4>
+                                <h6 class="mb-3">Element Management System for 4G Network</h6>
+                            </div>
+                        </div>
+                        <div class="ms-sm-4 mt-3">
+                            <span>I contributed as a full-stack developer to the Altiostar 4G EMS project, a 4G Element
+                                Management System that enables operators to remotely manage and monitor network
+                                elements. I took on the responsibility of implementing critical components, including
+                                the Performance Management Integration Reference Point (IRP) and File Transfer IRP,
+                                facilitating efficient data collection, analysis, and secure file transfers within the
+                                network. Additionally, I contributed to Trace Management functionalities and played an
+                                active role in developing a front-end framework that generated UI components based on
+                                XML configuration. My contributions in this project provided valuable experience in
+                                network management, performance optimization, and front-end development.</span>
+                            <div class="mt-4">
+                                <a href="https://www.crunchbase.com/organization/altiostar-networks" target="_blank"
+                                    class="project-link">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="img/myproject-6.svg" height="110px" width="110px">
+                            </div>
+                            <div class="col-sm-9 mt-4">
+                                <h4 class="mb-3">Cloudentix</h4>
+                                <h6 class="mb-3"> Identity Access Management (IAM)</h6>
+                            </div>
+                        </div>
+                        <div class="ms-sm-4 mt-3">
+                            <span>As a full-stack developer at Sennovate Inc., I played a pivotal role in the
+                                development of the Cloudentix Identity Access Management (IAM) product. I took on
+                                end-to-end responsibilities, implementing connectors for different operating systems,
+                                databases (including Oracle, MySQL, and MSSQL), as well as popular cloud platforms like
+                                Salesforce and Office 365. These connectors facilitated seamless integration and allowed
+                                organizations to efficiently manage user identities and access controls across a wide
+                                range of IT resources. Moreover, I focused on optimizing the performance of the
+                                connectors, ensuring they could scale to handle high-level demands. My contributions to
+                                the Cloudentix IAM product enhanced accessibility, performance, and streamlined IAM
+                                processes for organizations.</span>
+                            <div class="mt-4">
+                                <a href="https://sennovate.com/" target="_blank" class="project-link">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="img/myproject-7.jpg" height="110px" width="110px">
+                            </div>
+                            <div class="col-sm-9 mt-4">
+                                <h4 class="mb-3">MADAD</h4>
+                                <h6 class="mb-3">A Readability Annotation Tool for Arabic Text</h6>
+                            </div>
+                        </div>
+                        <div class="ms-sm-4 mt-3">
+                            <span>At iWAN Research Group, I undertook the development of MADA, an annotation tool
+                                designed for annotating datasets in the field of Natural Language Processing (NLP). As a
+                                full-stack developer, I assumed complete end-to-end responsibility for this project as a
+                                single individual contributor. From scratch, I crafted the user interface (UI) to
+                                deliver a seamless and intuitive experience. I implemented document annotation features,
+                                allowing users to label and annotate specific sections within textual documents.
+                                Additionally, I developed token-based annotation capabilities to mark and classify
+                                individual tokens for fine-grained analysis. By integrating schema-based annotation, I
+                                enabled users to annotate data based on predefined guidelines, ensuring standardized
+                                annotations across datasets. Through my contributions, MADA empowers researchers and
+                                practitioners in NLP with efficient dataset annotation and analysis.</span>
+                            <div class="mt-4">
+                                <a href="https://www.slideshare.net/AbeerAlDayel1/madad-arabic-annotation-tool-for-arabic-text"
+                                    target="_blank" class="project-link">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="img/myproject-8.jpg" height="110px" width="110px">
+                            </div>
+                            <div class="col-sm-9 mt-4">
+                                <h4 class="mb-3">Nokia VAMS</h4>
+                                <h6 class="mb-3">Vulnerability Assessment & Management System</h6>
+                            </div>
+                        </div>
+                        <div class="ms-sm-4 mt-3">
+                            <span>I played a vital role as a full-stack developer in the development of Nokia VAMS, a
+                                robust Vulnerability Assessment and Management System. This comprehensive system
+                                empowered security experts to assess, mitigate, and manage vulnerabilities across over
+                                500 Nokia products at different version levels. Leading the front-end development, I
+                                designed and implemented a framework for the user interface (UI), optimizing developer
+                                productivity and ensuring consistency. Additionally, I developed a parsing system to
+                                efficiently process vulnerability reports from multiple scanners, enabling quick
+                                analysis and remediation. By creating connectors/interfaces for various scanners and
+                                Fault Management tools, I facilitated seamless integration for report retrieval. To
+                                maintain real-time visibility, I implemented a scheduler that periodically updated the
+                                status of each vulnerability. Through my contributions, Nokia VAMS provided a powerful
+                                solution for comprehensive vulnerability assessment and management across a diverse
+                                range of Nokia products.</span>
+                            <div class="mt-4">
+                                <a href="https://www.nokia.com/" target="_blank" class="project-link">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Start -->
+
+    <!--<div class="container-xxl py-6 pt-5" id="project">
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Projects</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                        <li class="mx-3 active" data-filter="*">All Projects</li>
+                        <li class="mx-3" data-filter=".first">UI/UX Design</li>
+                        <li class="mx-3" data-filter=".second">Graphic Design</li>
+                    </ul>
+                </div>
+            </div>
+			<div class="row">
+			  <div class="col-12">
+					<img width="100%" src="img/coming-soon-text.jpg">
+			  </div>
+			</div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-1.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://www.crunchbase.com/organization/rostr-your-daily-commute-partner" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-2.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://wellfound.com/company/lawcunae-infomation-solutions" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-3.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://wellfound.com/company/customitnow-1" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-4.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-5.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-6.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-6">
+                <div class="col-12 col-md-6 col-lg-3">
+                <a href="#">
+                    <div class="position-relative mw-100">
+                    <img class="w-100 rounded-3" src="gradia-assets/images/blog/blog1.png" alt=""><div class="position-absolute bottom-0 start-0 w-100 rounded-3">
+                    <div class="p-2">
+                        <div class="bg-black bg-opacity-75 p-4 w-100 rounded-3">
+                        <span class="d-inline-block fs-18 fw-medium text-secondary-light text-uppercase mb-2" style="letter-spacing: 1px;">Digital Transformation</span>
+                        <h3 class="fs-17 fw-semibold lh-sm text-white mb-0">Embrace the power of digital technologies to drive innovation and stay ahead of the competition.</h3>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                <a href="#">
+                    <div class="position-relative mw-100">
+                    <img class="w-100 rounded-3" src="gradia-assets/images/blog/blog2.png" alt=""><div class="position-absolute bottom-0 start-0 w-100 rounded-3">
+                    <div class="p-2">
+                        <div class="bg-black bg-opacity-75 p-4 w-100 rounded-3">
+                        <span class="d-inline-block fs-18 fw-medium text-secondary-light text-uppercase mb-2" style="letter-spacing: 1px;">Growth Strategy</span>
+                        <h3 class="fs-17 fw-semibold lh-sm text-white mb-0">Develop strategic plans to scale your business, expand market reach, and drive sustainable growth.</h3>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                <a href="#">
+                    <div class="position-relative mw-100">
+                    <img class="w-100 rounded-3" src="gradia-assets/images/blog/blog3.png" alt=""><div class="position-absolute bottom-0 start-0 w-100 rounded-3">
+                    <div class="p-2">
+                        <div class="bg-black bg-opacity-75 p-4 w-100 rounded-3">
+                        <span class="d-inline-block fs-18 fw-medium text-secondary-light text-uppercase mb-2" style="letter-spacing: 1px;">ORGANISE EXCELLENCE</span>
+                        <h3 class="fs-17 fw-semibold lh-sm text-white mb-0">Shaping a culture of innovation, collaboration, and agility that aligns with business objectives.</h3>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                <a href="#">
+                    <div class="position-relative mw-100">
+                    <img class="w-100 rounded-3" src="gradia-assets/images/blog/blog4.png" alt=""><div class="position-absolute bottom-0 start-0 w-100 rounded-3">
+                    <div class="p-2">
+                        <div class="bg-black bg-opacity-75 p-4 w-100 rounded-3">
+                        <span class="d-inline-block fs-18 fw-medium text-secondary-light text-uppercase mb-2" style="letter-spacing: 1px;">Technology Integration</span>
+                        <h3 class="fs-17 fw-semibold lh-sm text-white mb-0">Seamlessly integrate cutting-edge technologies to optimize processes and drive business results.</h3>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+			
+        </div>
+    </div>
+    <!-- Projects End -->
+
+
+    <!-- Testimonial Start -->
+    <!--<div class="container-fluid bg-light py-5 my-5" id="testimonial">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-left h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-1.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-2.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-3.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-right h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Contact Start --
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                </div>
+                <!--<div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="">Say Hello</a>
+                </div>--
+            </div>
+            <div class="row g-5">
+                
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="mb-2">My office:</p>
+                    <h3 class="fw-bold">80/2-12, Mullai Nager, Salem, Tamilnadu, India</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Whatsapp me:</p>
+                    <h3 class="fw-bold">
+                        <a href="https://wa.me/+919994557775" target="_blank" rel="noopener noreferrer">
+                            <button class="btn btn-primary py-3 px-4" type="button" onclick=""><img src="img/whatsapp1.png" alt="Chat on Whatsapp"/>    Chat on Whatsapp</button>
+                        </a>
+                    </h3>
+                </div>
+                    <hr class="w-100">
+                    <p class="mb-2">Mail me:</p>
+                    <h3 class="fw-bold">
+                        <a style="color: black;" href="mailto:apgiridharan@gmail.com" target="_blank" rel="noopener noreferrer">apgiridharan@gmail.com</a></h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Follow me:</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-primary me-2" target="_blank" rel="noopener noreferrer"
+                        href="https://www.linkedin.com/in/giridharanpalanisamy/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="btn btn-square btn-primary me-2" target="_blank" rel="noopener noreferrer"
+                        href="https://www.instagram.com/apgiridharan/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-square btn-primary me-2" target="_blank" rel="noopener noreferrer"
+                        href="https://twitter.com/apgiridharan">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-square btn-primary me-2" target="_blank" rel="noopener noreferrer"
+                        href="https://www.facebook.com/apgiridharan">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+                <!--<div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <p class="mb-4">Your innovative ideas have great potential, and we would love to help you turn them into tangible products that can make a real impact in the market. Let's work together to bring your ideas to life!</p>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 px-5" type="button" onclick="sendMessage();">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>--
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-8">
+                        <p class="mb-2">My office:</p>
+                        <h3 class="fw-bold">80/2-12, Mullai Nager, Salem, Tamilnadu, India</h3>
+                        <hr class="w-100">
+                        <p class="mb-2">Whatsapp me:</p>
+                        <h3 class="fw-bold">
+
+                            <button class="btn btn-primary py-3 px-4 " id="button1" type="button"><img
+                                    src="img/whatsapp1.png" alt="Chat on Whatsapp" id="button1" /> Chat on
+                                Whatsapp</button>
+
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-4">
+                        <p class="mb-2">Mail me:</p>
+                        <h3 class="fw-bold">
+                            <a style="color: black;" href="mailto:apgiridharan@gmail.com" target="_blank"
+                                rel="noopener noreferrer">apgiridharan@gmail.com</a>
+                        </h3>
+                        <hr class="w-100">
+                        <p class="mb-2">Follow me:</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-square btn-primary me-2" target="_blank" rel="noopener noreferrer"
+                                href="https://www.linkedin.com/in/giridharanpalanisamy/">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="btn btn-square btn-primary me-2" target="_blank" rel="noopener noreferrer"
+                                href="https://www.instagram.com/apgiridharan/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-square btn-primary me-2" target="_blank" rel="noopener noreferrer"
+                                href="https://twitter.com/apgiridharan">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-square btn-primary me-2" target="_blank" rel="noopener noreferrer"
+                                href="https://www.facebook.com/apgiridharan">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Map Start --
+    <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-xxl pt-5 px-0">
+            <div class="bg-dark">
+                
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.2119543484654!2d78.11931230734024!3d11.666658500000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf072fff14a41%3A0xf2ad5ce7ef3c1a44!2s80%2F12%2C%20Mullai%20Nagrar%20E%20Rd%2C%20Thiruvakavundanur%2C%20Salem%2C%20Tamil%20Nadu%20636002!5e0!3m2!1sen!2sin!4v1679541166566!5m2!1sen!2sin" 
+				style="width: 100%; height: 450px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Map End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom text-secondary" href="https://giridharan.tech">Giridharan
+                        Palanisamy</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a class="border-bottom text-secondary"
+                        href="https://www.linkedin.com/in/hari-prasath-7aab25a4/">Hari Prasad</a>
+                    <!--<br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!---modal-->
+
+    <div class="modal custom-modal" tabindex="-1" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="img/logowa.jpg" class="rounded-circle img-fluid" alt="" style="max-width: 40px;">
+                    <h5 class="modal-title " id="modal-heading">Contact via WhatsApp</h5>
+                    <button type="button" id="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="contactform">
+                    <div class="modal-body">
+                        <div class="mb-2">
+                            <label for="exampleInputtext1" class="form-label">Name:</label>
+                            <input type="text" class="form-control name-input" id="exampleInputtext1" name="name"
+                                placeholder="Your name" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="exampleInputEmail1" class="form-label">Email address:</label>
+                            <input type="email" class="form-control mail-input" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="exampleInputtext3" class="form-label ">Phone number:</label>
+                            <input type="text" class="form-control ph-input" id="exampleInputtext3" name="phonenumber"
+                                placeholder="Your number" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="exampleInputtext4" class="form-label msg-label">Message:</label>
+
+                            <textarea class="form-control msg-input" id="exampleFormControlTextarea1" rows="3"
+                                name="text" required minlength="25"></textarea>
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer ">
+                        <div class="whatsapp-sent">
+                            <button class="btn sub">
+                                <Span class="textbt"> Submit</Span>
+                                <img class="sendlogo" src="img/send.svg">
+                            </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <!--modalend-->
+        <!--modalscript-->
+        <script>
+
+
+            let modal = document.getElementById('modal');
+            let btn = document.getElementById('button1');
+            let cl = document.getElementById("btn-close")
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            cl.onclick = function () {
+
+                modal.style.display = "none";
+            }
+
+
+
+
+            //form
+            document.getElementById('contactform').addEventListener("submit", function (event) {
+                event.preventDefault();
+                let Formdata = new FormData(event.target);
+                let email = Formdata.get("email");
+                let text = Formdata.get("text");
+                let name = Formdata.get("name");
+                let phonenumber = Formdata.get("phonenumber");
+
+                let message = "Hi, I am interested in your product.\nPlease contact me for further details.\nName:" + name + "\nEmail: " +
+                    email + "\nphonenumber:" + phonenumber + "\nmessage:" + text;
+                let whatsappNumber = "+919994557775";
+                let whatsapp = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+                window.location.href = whatsapp;
+
+            })
+
+        </script>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </div>
+</body>
+
+</html>
